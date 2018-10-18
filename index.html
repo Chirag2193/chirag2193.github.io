@@ -1,9 +1,95 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Chirag 2193</title>
+	<title></title>
+	<style type="text/css">
+		a {
+			height: 50px;
+			width: 150px;
+			padding: 15px;
+			background-color: #fff;
+  			color: #ff00ff;
+  			transition: all 2000ms ease-in-out;
+			display: inline-block;
+			border: 2px solid;
+			border-color: black;
+			position: relative;
+		}
+
+		a:hover {
+		  height: 100px;
+		  width: 250px;
+		  color: white;
+		  background-color: black;
+		  border-color: white;
+		  font-size: 24px;
+		}
+
+		.box, .box-one, .box-two,
+		.box-card{
+			height: 50px;
+			width: 150px;
+			position: relative;
+			display: inline-block;
+		}
+		.box{
+			top: 20%;
+			background-color: green;
+			transform: rotate(0deg) translate(0,0) scale(1,1);
+			transition: all 1000ms linear;
+		}
+		.box-one{
+			animation: spin 1s linear 3;
+			background-color: grey;
+		}
+
+		.box-two{
+			background-color: cyan;
+			animation: box_two 2s steps(10);
+		}
+
+		.box-card{
+			filter: grayscale(100%) contrast(150%);
+  			transition: all 3s linear;
+		}
+
+		.box:hover{
+			background-color: grey;
+			transform: rotate(360deg) translate(0,200px) scale(1.5,1.5);
+		}
+
+		.box-card:hover{
+			filter: grayscale(0) contrast(100%);
+		}
+
+		@keyframes spin{
+			from{
+				transform: rotate(0);
+			}
+			to{
+				transform: rotate(360deg);
+			}
+		}
+
+		@keyframes box_two{
+			0%{
+				background-color: grey;
+			}
+			20%{
+				background-color: blue;
+			}
+			70%{
+				background-color: #808080;
+			}
+		}
+
+	</style>
 </head>
 <body>
-	<h3>Finally game on!</h3>
-</body>	
+	<a href="" class="button">Button</a>
+	<div id="box" class="box">Box!</div>
+	<div class="box-one">Box-one!</div>
+	<div class="box-two">Box-two!</div>
+	<div class="box-card">Box-card!</div>
+</body>
 </html>
